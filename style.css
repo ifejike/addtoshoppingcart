@@ -244,3 +244,15 @@ transition: 0.5s;
 .like-button .fa-heart {
     color: #ff69b4;
 }
+/* Responsive styling */
+@media (max-width: 768px) {
+    .item {
+        flex: 1 1 45%; /* Two items per row on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .item {
+        flex: 1 1 100%; /* One item per row on mobile devices */
+    }
+}
