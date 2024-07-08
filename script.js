@@ -32,7 +32,7 @@ const initApp = () => {
         newDiv.innerHTML = `
             <img src="img/${value.image}" alt="${value.name}">
             <div class="title">${value.name}</div>
-            <div class="price">${value.price.toLocaleString()}</div>
+            <div class="price"><span>$</span>${value.price.toLocaleString()}</div>
             <button onclick="addToCart(${key})">Add To Cart</button>
             <button onclick="likeProduct(${key})" class="like-button"><i class="far fa-heart"></i></button>
         `;
@@ -65,7 +65,7 @@ const reloadCart = () => {
             newDiv.innerHTML = `
                 <div><img src="img/${value.image}" alt="${value.name}" height="10%" width="100%"></div>
                 <div class="cardtitle">${value.name}</div>
-                <div class="cardprice">${(value.price * value.quantity).toLocaleString()}</div>
+                <div class="cardprice"><span>$</span>${(value.price * value.quantity).toLocaleString()}</div>
                 <div>
                     <button style="background-color: #2279c2" class="cardbutton" onclick="changeQuantity(${key}, ${value.quantity - 1})">-</button>
                     <div class="count">${value.quantity}</div>
